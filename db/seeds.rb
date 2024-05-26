@@ -60,7 +60,7 @@ braganca = Concelho.create([
 {nome: 'Vila Flor', distrito_id:4},
 ])
 
-vilareal = Cocelho.create([
+vilareal = Concelho.create([
     { nome: "Alijó", distrito_id:18 },
     { nome: "Boticas", distrito_id:18 },
     { nome: "Chaves", distrito_id:18 },

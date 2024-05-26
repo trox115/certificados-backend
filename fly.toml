@@ -1,11 +1,13 @@
-# fly.toml app configuration file generated for topoleo on 2024-05-26T16:53:32+01:00
+# fly.toml app configuration file generated for topoleo-quiet-thunder-1080 on 2024-05-26T17:04:44+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "topoleo"
-primary_region = "mad"
-console_command = "/rails/bin/rails console"
+app = 'topoleo-quiet-thunder-1080'
+primary_region = 'mad'
+console_command = '/rails/bin/rails console'
+
+[build]
 
 [http_service]
   internal_port = 3000
@@ -14,6 +16,11 @@ console_command = "/rails/bin/rails console"
   auto_start_machines = true
   min_machines_running = 0
 
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
 [[statics]]
-  guest_path = "/rails/public"
-  url_prefix = "/"
+  guest_path = '/rails/public'
+  url_prefix = '/'
